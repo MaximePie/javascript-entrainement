@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #2c3e50;
+    color: #e2dcec;
+    font-family: 'Roboto', sans-serif;
+}
+
+.mt-1em {
+    margin-top: 1em;
+}
+
+h1 {
+    color: white;
+}
+
+header, .footer {
+    background-color: #501fff;
+    padding: 1em;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    float: left;
+    margin-right: 15px;
+}
+
+a {
+    color: #6DB9FC;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a span {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 700;
+    color: white;
+}
+
+section {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+}
+
+section.active {
+    opacity: 1;
+    animation: move-to-right 350ms ease-out;
+}
+
+section.inactive {
+    opacity: 0;
+    animation: move-out-screen 350ms ease-out;
+}
+
+@keyframes move-to-right {
+    from {
+        transform: translateX(-100%)skew(-50deg);
+    }
+    50% {
+        transform: translateX(10%) skew(-25deg);
+    }
+    80% {
+        transform: skew(5deg);
+    }
+    95% {
+        transform: skew(-5deg);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes move-out-screen {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(200%)skew(-50deg);
+    }
+}
+
+.content {
+    margin-top: 30px;
+    clear: left;
+}
+
+.container {
+    line-height: 1.6;
+    width: 1100px;
+    margin: auto;
+}
+
+ol li:first-child span {
+    display: block;
+}
+
+li {
+    color: #576EE6;
+}
+
+ol li:nth-child(3) span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    height: 50px;
+    text-align: left;
+}
+
+table, th, td {
+    border: 1px solid black;
+    color: red;
+}
+
+th, td {
+    padding: 1em;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 2em;
+}
+
+.form-group form input {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+button, input.btn {
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 1em;
+    border: 0.5px outset lightgreen;
+    background-color: fuchsia;
+    transition: background-color 300ms ease;
+}
+
+button:hover {
+    background-color: #ffa1ff;
+    border: 0.5px inset chartreuse;
+}
+
+
+.footer {
+    margin-top: 1em;
+}
+
+.footer a {
+    margin-left: calc(50% - 63.5px);
+    color: white;
+}

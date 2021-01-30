@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Components</title>
+    </head>
+    <body>
+        <div id="app">
+            <h3>All Tasks</h3>
+            <ul>
+                <li v-for="(task, index) in tasks">
+                    {{ task.description }}
+                    <input
+                        type="checkbox"
+                        v-model="task.done"
+                        @click="task.done = !task.done"
+                    />
+                </li>
+            </ul>
+            <h3>Tasks Done</h3>
+            <ul>
+                <li v-for="(task) in tasksDone">
+                    {{ task.description }}
+                </li>
+            </ul>
+            <h3>Tasks Not Done</h3>
+            <ul>
+                <li v-for="(task) in tasksNotDone">
+                    {{ task.description }}
+                </li>
+            </ul>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="computed.js"></script>
+    </body>
+</html>

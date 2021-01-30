@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Components</title>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <p>Créer un input de type texte. Quand on saisit des données dans input, elles s'affichent dans la balise "contenu"</p>
+
+                <p id="contenu"> {{ baba }}</p>
+                <input type="text" v-model="baba" />
+                <p v-if="isFormErroneous" style="color: red;"> {{ errorMessage }}</p>
+            </div>
+            <div>
+                <p>
+                    Créer un bouton qui appelle la méthode check et remplir cette fonction
+                </p>
+                <button v-on:click="check">Vérifier</button>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                data() {
+                    return {
+                        baba: "DADA",
+                        errorMessage: "Hé oh, on se calme",
+                        isFormErroneous: false,
+                    }
+                },
+                
+                methods: {
+                    
+                    /*
+                    * Cette méthode analyse le contenu de baba. Si baba fait plus de 8 caractères de long, afficher "Hé oh, on se calme".
+                    */
+                    check() {
+                        this.isFormErroneous = this.baba.length > 8
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

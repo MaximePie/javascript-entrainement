@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Components</title>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <p> Afficher la liste des personnes en affichant leurs attributs.
+                    Si une personne n'a pas de numéro de téléphone, afficher "Numéro de téléphone inconnu" à la place.
+                    Sinon, afficher le numéro.
+                </p>
+                <div v-for="personne in personnes">
+                    <span>{{ personne.firstname }}</span>
+                    <span>{{ personne.lastname}}</span>
+                    <span>{{ personne.phone}}</span>
+                    <span v-if="!personne.phone">Numéro de téléphone inconnu</span>
+                </div>
+            </div>
+            <div>
+                <p> Afficher la liste des téléphones avec leurs attributs. Si un téléphone n'a pas de prix, afficher "Prix inconnu". Sinon, afficher le prix</p>
+                <div>
+                    <p v-for="phone in telephones">
+                        <span>{{ phone.marque}}</span>
+                        <span v-if="!phone.prix">Prix inconnu</span>
+                        <span v-else>{{ phone.prix}}€</span>
+                    </p>
+                </div>
+                <div>
+                    <div v-for="personne in candidats">
+                        <span v-if="personne.favori" style="color: #00c100;">
+                            {{ personne.firstname }} {{ personne.lastname}}
+                        </span>
+                        <span v-else style="color: red;">
+                            {{ personne.firstname }} {{ personne.lastname}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p> Afficher la liste des candidats. Si le candidat est favoris, alors afficher son nom en vert. Sinon, l'afficher en rouge. </p>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                data() {
+                    return {
+                        personnes: [
+                            {
+                              firstname: "Charles",
+                              lastname: "Chichi",
+                              phone: undefined,
+                            },
+                            {
+                              firstname: "Carlo",
+                              lastname: "Le Calamar",
+                              phone: '5487548454',
+                            },
+                            {
+                              firstname: "Pika",
+                              lastname: "Lamar",
+                              phone: null,
+                            },
+                        ],
+                        
+                        telephones: [
+                            {
+                                marque: "Samsung",
+                                prix: 690,
+                            },
+                            {
+                                marque: "Simpson",
+                                prix: null
+                            },
+                            {
+                                marque: "Samsam",
+                                prix: 180000,
+                            },
+                        ],
+                        
+                        candidats: [
+                            {
+                              firstname: "Carlo",
+                              lastname: "Zouzou",
+                              favori: true,
+                            },
+                            {
+                              firstname: "Bota",
+                              lastname: "D'enfer",
+                              favori: false,
+                            },
+                            {
+                              firstname: "Bowl",
+                              lastname: "Potiron",
+                              favori: undefined,
+                            },
+                        ]
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

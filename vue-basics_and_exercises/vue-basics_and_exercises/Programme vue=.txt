@@ -1,0 +1,19 @@
+demain on va faire : 
+
+Jour 1
+L'instance de vue, data-binding, list rendering
+Maxime PieAujourd’hui à 16:47
+D'accord, ça marche !
+CharleneAujourd’hui à 16:47
+explication et demo sur Vue JS
+- 2 exercices
+Lundi prochain on fera 
+
+Jour 2
+Basic components, event handling, computed properties
+Jour 3
+Conditionnal rendering, Les fichiers .vue, Les props
+Jour 4
+Exercice de mise en pratique, construire une application CRUD avec le localstorage
+Jour 5
+Suite de l'exercice

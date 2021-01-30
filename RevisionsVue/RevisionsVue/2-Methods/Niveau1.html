@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Components</title>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <p>Remplir la fonction "afficheBonjour"</p>
+                <button v-on:click="afficheBonjour">Afficher bonjour</button>
+            </div>
+            <div>
+                <p>Remplir la fonction "afficheNom" et tester avec les boutons </p>                
+                <button v-on:click="afficheNom('Lino')">Lino</button>
+                <button v-on:click="afficheNom('Marcel')">Marcel</button>
+            </div>
+            <div>
+                <p>Remplir la fonction afficheData et tester avec les boutons </p>
+                <button v-on:click="afficheData(motDePasseTopSecret)">Afficher les données </button>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                data() {
+                    return {
+                      motDePasseTopSecret: "Si mon boss le sait je suis dans la zouz"
+                    }
+                },
+                methods: {
+                    
+                    /*
+                    * Cette méthode affiche "Bonjour" via console.log
+                    */
+                    afficheBonjour() {
+                        console.log("Bonjour");
+                    },
+                    
+                    
+                    /*
+                    * Cette fonction affiche le nom reçu en paramètre dans console.log 
+                    */
+                    afficheNom(nomPersonne) {
+                        console.log(nomPersonne)
+                    },
+                    
+                    /*
+                    * Cette fonction affiche la valeur de motDePasseTopSecret contenu dans la structure data 
+                    */
+                    afficheData(data) {
+                        console.log(this.motDePasseTopSecret);
+                    },
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Components</title>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <p>
+                    Afficher chaque fruit dans une boucle v-for. Pour chaque fruit, afficher son nom, et un input qui permet de changer son prix grâce à v-model. 
+                </p>
+                <div v-for="fruit in fruits">
+                    <p>{{ fruit.name }}</p>
+                    <p> {{ fruit.prix }}</p>
+                    <input type="text"  v-model="fruit.prix"/>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                data() {
+                    return {
+                        fruits: [
+                            {
+                                 name: "Apple",
+                                prix: 50,   
+                            },
+                            {
+                                 name: "Orange",
+                                prix: 8,   
+                            },
+                            {
+                                 name: "DesBarres",
+                                prix: undefined,   
+                            },
+                            {
+                                 name: "Apple",
+                                prix: 50,   
+                            },
+                        ]
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

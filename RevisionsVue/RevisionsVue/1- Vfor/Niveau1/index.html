@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Components</title>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <p> Afficher la liste des notes dans une boucle v-for</p>
+                <ul>
+                    <li v-for="note in notes"> {{ note }}</li>
+                </ul>
+            </div>
+            <div>
+                <p> Afficher la liste des lettres dans une boucle v-for</p>
+                <span v-for="lettre in lettres"> {{ lettre }}</span>
+            </div>
+            <div>
+                <p> Afficher la liste des courses dans une boucle v-for </p>
+                <p v-for="aliment in courses"> L'aliment:  {{ aliment }}</p>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                data() {
+                    return {
+                        notes: [5, 20, 19, 5, 14],
+                        lettres: ['C', '\'', 'E', 'S', 'T', ' ', 'P', 'A', 'S', ' ', 'F', 'A','U','X'],
+                        courses: ['Croustilles', 'Brocolis', 'Vin de 1800', 'Oeufs'],
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

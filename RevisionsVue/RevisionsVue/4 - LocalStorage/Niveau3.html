@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Components</title>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <p>Créer un mécanisme qui permet de saisir une musique et de la sauvegarder dans le local Storage sous une clé "music"</p>
+                <input type="text" v-model="musique"/>
+                <button v-on:click="sauvegarderMusique"> Sauver</button>
+            </div>
+            <div>
+                <p>Remplir la méthode mounted de manière à récupérer la valeur de "music". </p>
+                <p>Attribuer la valeur de music à la data musique, et l'afficher</p>
+                <p>Afficher la musique ici seulement si elle n'est pas nulle.</p>
+                <span v-if="musique">
+                    {{ musique }}
+                </span>
+            </div>
+
+            <div>
+                <p>
+                    Créer un mécanisme qui permet de saisir un plat préféré, et de le sauvegarder dans le local Storage sous une clé "favoriteIngredient"
+                </p>
+                <input type="text"  v-model="ingredient" />
+                <button v-on:click="enregistrerIngredient">Enregistrer</button>
+                <p>Remplir la méthode mounted de manière à également récupérer la valeur de "favoriteIngredient"</p>
+                <p>Attribuer la valeur de favoriteIngredient à la data ingredient</p>
+                <p>Afficher l'ingrédient favoris seulement si il n'est pas nul</p>
+                {{ ingredient }}
+            </div>
+
+            <div>
+                <p>
+                    Créer un mécanisme qui permet de saisir un age et de le stocker sous une clé "age",
+                    si et seulement si l'âge est supérieur à 18. Si l'âge est inférieur à 18, alors alerter
+                    "Impossible ! Petit !"
+                </p>
+<!--                <input type="text" v-model="age" />-->
+                <button v-on:click="saveAge"> Save age </button>
+                <p>Remplir la méthode mounted de manière à également récupérer la valeur de age</p>
+                <p>Attribuer la valeur de age à la data age</p>
+                <h1>{{ age }}</h1>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                data() {
+
+                    return {
+                        musique: "",
+                        ingredient: null,
+                        age: null,
+                    }
+                },
+
+              methods: {
+
+                  /**
+                   * Sauvegarder la musique saisie dans le data, dans le Local Storage
+                   */
+                    sauvegarderMusique() {
+                        localStorage.setItem('musique', this.musique);
+                        console.log('Musique enregistrée');
+                    },
+
+                /**
+                 * Enregistre une valeur favoriteIngredient dans le Local Storage
+                 */
+                enregistrerIngredient() {
+                    localStorage.setItem('favoriteIngredient', this.ingredient);
+                    console.log("L'ingrédient " + this.ingredient + " a bien été sauvegardé ")
+                },
+
+                saveAge() {
+                  if (this.age >= 18) {
+                    localStorage.setItem('age', this.age);
+                    console.log("L'âge a bien été sauvegardé");
+                  }
+                  else {
+                    console.log("Impossible ! Petit !");
+                  }
+                }
+              },
+
+              /*
+              * Cette méthode est appelée à la création du composant. Elle sert à mettre tout en place.
+              * */
+                mounted() {
+                  this.musique = localStorage.getItem("musique");
+                  this.ingredient = localStorage.getItem("favoriteIngredient");
+                  this.age = localStorage.getItem("age");
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Components</title>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <a href="https://ui.vision/howto/view-local-storage#:~:text=With%20the%20extension's%20background%20page,your%20browser's%20local%20storage%20there.">Consultez la documentation ici </a>
+                <p>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage">Consulter la documentation sur l'utilisation de Local Storage</a>
+                </p>
+                <p>Remplir la fonction enterMushibushi</p>
+                <button v-on:click="enterMushibushi"> Entrer Mushibushi</button>
+            </div>
+            <div>
+                <p>Remplir la fonction enterRonron</p>
+                <button v-on:click="enterRonron">enterRonron</button>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                methods: {
+                    /*
+                    * Cette méthode stocke une valeur "Ronron Le chat" dans le local Storage sous le nom "animal"
+                    */
+                    enterRonron() {
+                        console.log("COUCOU RONRON");
+                        localStorage.setItem('animal', 'Ronron Le chat');
+                    },
+
+                    /*
+                    * Cette méthode stocke une valeur "Mushibushi" dans le local Storage sous le nom "myValue"
+                    */
+                    enterMushibushi() {
+                      localStorage.setItem('myValue', 'Mushibushi');
+                    },
+                }
+            });
+        </script>
+    </body>
+</html>

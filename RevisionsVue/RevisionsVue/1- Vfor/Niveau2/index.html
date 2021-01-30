@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Components</title>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <p>Afficher la liste des personnes sous la forme "firstname lastname" dans une boucle v-for</p>
+                <div v-for="personne in personnes">
+                    <p>
+                        {{ personne.firstname }} {{ personne.lastname }}
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p>Afficher la liste des menus sous la forme : "Entree, plat, dessert"</p>
+                <div v-for="menu in menus">
+                    <ul>
+                        <li v-for="partie in menu"> {{ partie }}</li>
+                    </ul>
+                    <!--  Equivalent -->
+                    <ul>
+                        <li>{{ menu.entree }}</li>
+                        <li>{{ menu.plat }}</li>
+                        <li>{{ menu.dessert }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <p>Afficher la liste des pays. Pour chaque pays, afficher son nom dans une balise p, et afficher son drapeau dans une balise img</p>
+                <div v-for="country in pays">
+                    <h2>{{ country.nom }}</h2>
+                    <img :src="country.drapeau" :alt="country.nom">
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                data() {
+                    return {
+                        personnes: [
+                            {
+                              firstname: "Charles",
+                              lastname: "Chichi",
+                            },
+                            {
+                              firstname: "Carlo",
+                              lastname: "Le Calamar",
+                            },
+                            {
+                              firstname: "Pika",
+                              lastname: "Lamar",
+                            },
+                        ],
+                        
+                        menus: [
+                            {
+                                entree: "Salade",
+                                plat: "Tomates",
+                                dessert: "Oignons",
+                            },
+                            {
+                                entree: "Courges",
+                                plat: "Poireaux",
+                                dessert: "Poisson périmé",
+                            },
+                            {
+                                entree: "Croûtons",
+                                plat: "Kébab",
+                                dessert: "Crème brûlée",
+                            }
+                        ],
+                        
+                        pays: [
+                            {
+                                nom: "France",
+                                drapeau: "https://dekkade.com/1653-tm_thickbox_default/drapeau-france.jpg",
+                            },
+                            {
+                                nom: "Moldavie",
+                                drapeau: "https://upload.wikimedia.org/wikipedia/commons/2/27/Flag_of_Moldova.svg",
+                            },
+                            {
+                                nom: "Afrique du Sud",
+                                drapeau: "https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg",
+                            },
+                        ],
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Components</title>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <h2> Frais </h2>
+                <p> Afficher la liste des courses en n'affichant que les produits frais grâce à computed </p>
+                <p v-for="aliment in alimentsFrais">
+                    {{ aliment.name }} - {{ aliment.type }}
+                </p>
+            </div>
+            <div>
+                <h2>Légumes </h2>
+                <p> Afficher la liste des courses en n'affichant que les légumes</p>
+                <p v-for="aliment in legumes">
+                    {{ aliment.name }} - {{ aliment.type }}
+                </p>
+            </div>
+            <div>
+                <p>Afficher la liste des personnes en n'affichant que les personnes majeures grâce à computed </p>
+                <div v-for="personne in majeurs">
+                    <p>{{ personne.name }}</p>
+                    <p>{{ personne.age }}</p>
+                </div>
+            </div>
+            <div>
+                <p>
+                    Afficher la liste des mois écrits en toutes lettres grâce à computed. Par exemple, pour le mois 1, afficher "Janvier".
+                </p>
+                <p v-for="moisEnLettre in moisEnLettres">
+                    {{ moisEnLettre }}
+                </p>
+                <p v-for="month in mois">
+                    {{ month }}
+                </p>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                data() {
+                    return {
+                        courses: [
+                            {
+                                name: "Courgette",
+                                type: "Légume",
+                            },
+                            {
+                                name: "Viandox",
+                                type: "frais",
+                            },
+                            {
+                                name: "Haricots",
+                                type: "Légume",
+                            },
+                            {
+                                name: "Kébab",
+                                type: "frais",
+                            },
+                            {
+                                name: "Pates",
+                                type: "Impérissable",
+                            },
+                            {
+                                name: "Pouleto",
+                                type: "frais",
+                            },
+                        ],
+
+                        personnes: [
+                            {
+                                name: "Charly",
+                                age: 15,
+                            },
+                            {
+                                name: "Bobby",
+                                age: 21,
+                            },
+                            {
+                                name: "Billy el major",
+                                age: 850,
+                            },
+                        ],
+
+                        mois: [1,2,3,4,5,6,7,8,9,10,11,12],
+                    }
+                },
+
+              computed: {
+                alimentsFrais() {
+                  return this.courses.filter(function(aliment) {
+                    return aliment.type === "frais";
+                  });
+                },
+
+                legumes() {
+                  return this.courses.filter(function(aliment) {
+                    return aliment.type === 'Légume';
+                  });
+                },
+
+                majeurs() {
+                  return this.personnes.filter(personne => {
+                    return personne.age >= 18;
+                  })
+                },
+
+                moisEnLettres() {
+                  return this.mois.map(month => {
+                    switch(month) {
+                      case 1:
+                        return "Janvier";
+                      case 2:
+                        return "Février";
+                        case 3:
+                          return "Mars";
+                        case 4:
+                          return "Avril";
+                        case 5:
+                          return  "Mai";
+                        case 6:
+                          return  "Juin";
+                        case 7:
+                          return  "Juillet";
+                        case 8:
+                          return  "Août";
+                        case 9:
+                          return  "Septembre";
+                        case 10:
+                          return  "Octobre";
+                        case 11:
+                          return  "Novembre";
+                        case 12:
+                          return  "Décembre";
+                    }
+                  })
+                }
+              }
+            });
+        </script>
+    </body>
+</html>

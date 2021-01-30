@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Composants, bonus</title>
+    <style type="text/css" src="style.css">
+        .app {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .content {
+            height: 300px;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .button {
+            padding: 8px;
+            width: 100px;
+            height: 40px;
+            margin: 8px;
+            border-radius: 4px;
+            outline: none;
+            border: none;
+            color: white;
+
+            cursor: pointer;
+        }
+
+        .button--red {
+            background-color: red;
+        }
+
+        .button--blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app" class="app">
+    <div class="content">
+        <div>
+            <button class="button button--red" v-on:click="check('rouge')" >Rouge</button>
+            <button class="button button--blue" v-on:click="check('bleu')">Bleu</button>
+        </div>
+        <h1>{{ currentResult }} </h1>
+        <h2>Victoires {{ victoires }} </h2>
+        <h2>Défaites {{ defaites }} </h2>
+        <div>
+            <p v-for="result in trackList" v-text="result"></p>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="module">
+  new Vue({
+    el: "#app",
+    data() {
+      return {
+        correctButton: this.generateCorrectButton(),
+        victoires: 0,
+        defaites: 0,
+        trackList: [],
+        currentResult: '',
+      }
+    },
+
+    methods: {
+      check(color) {
+        let result = '';
+        if (color === this.correctButton) {
+          this.victoires ++;
+          result = 'Victoire';
+        }
+        else {
+          this.defaites ++;
+          result = 'Défaite';
+        }
+
+        this.trackList.push(result);
+        this.currentResult = result;
+        this.correctButton = this.generateCorrectButton();
+      },
+
+      /**
+       * This method generates the color which is meant to be the correct one.
+       */
+      generateCorrectButton() {
+        const colors = ['rouge', 'bleu'];
+        const randomIndex = Math.round(Math.random());
+        return colors[randomIndex];
+      }
+    }
+  })
+</script>
+</body>
+</html>

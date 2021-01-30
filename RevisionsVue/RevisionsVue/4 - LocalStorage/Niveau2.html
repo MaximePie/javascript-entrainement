@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Components</title>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <a href="https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage">Documentation</a>
+                <p>Remplir la fonction savePseudo et l'appeler depuis le bouton</p>
+                <button v-on:click="savePseudo('Kiki')">Kiki</button>
+                <button v-on:click="savePseudo('Charles')">Charles</button>
+            </div>
+            <div>
+                <p>Remplir la fonction displayPseudo et créer un bouton qui va l'appeler</p>
+                <button v-on:click="displayPseudo"> Displayed pseudo </button>
+                <button v-on:click="deletePseudo">Supprimer pseudo </button>
+            </div>
+            <div>
+                <p>Créer un data age qui sera lié à un input. </p>
+                <input type="text" v-model="age" />
+                <p>Rempir la fonction saveAge et la fonction displayAge</p>
+                <div>
+                    <button v-on:click="saveAge"> Sauvegarder </button>
+                    <button v-on:click="displayAge"> Afficher </button>
+                </div>
+            </div>
+            <div>
+                <p>
+                    Remplir la fonction "affichePersonnage"
+                </p>
+                <button v-on:click="affichePersonnage"> Affiche personnage </button>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                data() {
+                  return {
+                    age: 18,
+                  }
+                },
+                methods: {
+                    /*
+                    * Cette méthode sauvegarde une clé "pseudo" qui contient la valeur "Gourou des plages" dans le LocalStorage 
+                    */
+                    savePseudo(pseudo) {
+                        localStorage.setItem('pseudo', pseudo);
+                        console.log("La sauvegarde s'est bien passée");
+                    },
+
+                    /*
+                    * Cette méthode récupère la valeur "pseudo" de Local Storage et l'affiche dans un console.log. Si aucune valeur n'est trouvée, elle affiche "Valeur non trouvée."
+                    */
+                    displayPseudo() {
+                        const savedPseudo = localStorage.getItem('pseudo');
+
+                        if (!savedPseudo) {
+                          console.log("Pseudo non trouvé");
+                        }
+                        else {
+                          console.log("Pseudo trouvé : " + savedPseudo);
+                        }
+                    },
+
+                    /**
+                     * Supprimer la valeur pseudo dans le local Storage
+                     */
+                      deletePseudo() {
+                          const savedPseudo = localStorage.getItem('pseudo');
+
+                            if (!savedPseudo) {
+                              console.log("Rien n'a été supprimé")
+                            }
+                            else {
+                              localStorage.removeItem('pseudo');
+                              console.log("Supprimer le pseudo : " + savedPseudo)
+                            }
+                      },
+
+                    /*
+                    * Cette méthode sauvegarde la valeur du data age dans une valeur "age" du LocalStorage 
+                    */
+                    saveAge() {
+                        localStorage.setItem('age', this.age);
+                        console.log("L'âge a bien été sauvegardé ");
+                    },
+
+                    /*
+                    * Cette méthode récupère la valeur de "age" dans le Local Storage 
+                    */
+                    displayAge() {
+                        const savedAge = localStorage.getItem('age');
+                        console.log(!savedAge ? 'Age non trouvé' : savedAge);
+
+                        // if (!savedAge) {
+                        //    console.log("Age non trouvé");
+                        // }
+                        // else {
+                        //   console.log(savedAge);
+                        // }
+                    },
+                    
+                    /*
+                    * Affiche le pseudo et l'âge récupérés dans le local Storage dans un console.log 
+                    */
+                    affichePersonnage() {
+                      const savedAge = localStorage.getItem('age');
+                      const savedPseudo = localStorage.getItem('pseudo');
+
+                      let result = '';
+
+                      // if (!savedPseudo) {
+                      //   result += ' Pseudo non trouvé ';
+                      // }
+                      // else {
+                      //   result += savedPseudo;
+                      // }
+                      //
+                      // if (!savedAge) {
+                      //   result += " Age non trouvé ";
+                      // }
+                      // else {
+                      //   result += ' ' + savedAge;
+                      // }
+
+                      result += !savedPseudo ? 'Pseudo non trouvé ' : savedPseudo;
+                      result += !savedAge ? " Age non trouvé" : ' ' + savedAge;
+
+                      console.log(result);
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
