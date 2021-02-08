@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conditions</title>
+    <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<h1>Niveau 5</h1>
+<div class="Exercice">
+    <h2>Exercice 1</h2>
+    <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel#description">Documentation
+        sur l'utilisation des ternaires</a>
+    <p>Le but de cet exercice est d'économiser le code grâce aux ternaires</p>
+    <div class="Consignes">
+        <p>
+            Transformer le code de manière à attribuer la valeur <code>true</code> ou <code>false</code>
+            à la variable <code>isMajeur</code> grâce à l'utilisation des ternaires.
+        </p>
+    </div>
+    <div class="Note">
+        <p>Les ternaires ne sont que des conditions qui sont compressées en une seule ligne.</p>
+        <p>Nous pouvons considérer cette expression : <code>estPair = number % 2 === 0 ? true : false</code></p>
+        <p>"Ma condition est-elle vraie" ? 'Valeur si Oui' : 'Valeur si non'</p>
+    </div>
+</div>
+<div class="Exercice">
+    <h2>Exercice 2</h2>
+    <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Nullish_coalescing_operator">
+        Documentation sur la coerxion
+    </a>
+    <div class="Consignes">
+        <p>Transformer le code de manière à ce que : </p>
+        <ul>
+            <li>
+                Si <code>animal === 'chien'</code>, donner la valeur <code>'Zouzou'</code> à la variable
+                <code>nom</code>
+            </li>
+            <li>
+                Sinon, lui affecter une valeur nulle
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+
+  // EXERCICE 1
+  // TODO - Transformer ce morceau de code de manière à ce qu'il tienne sur 3 lignes
+  let isMajeur = undefined;
+  let age = 21;
+  if (age >= 18) {
+    isMajeur = true;
+  } else {
+    isMajeur = false;
+  }
+  console.log(isMajeur ? 'Est majeur.e.' : "N'est pas majeur.e"); // Notez que cela peut s'utiliser pour remplacer une variable !
+
+  // EXERCICE 2
+  // TODO - Modifier ce code avec ||
+  let animal = 'doggo';
+  let nom = undefined;
+  if (animal === 'chien') {
+    nom = 'Zouzou';
+  } else {
+    nom = '';
+  }
+  console.log(nom);
+
+
+</script>
+</body>
+</html>

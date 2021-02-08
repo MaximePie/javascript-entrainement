@@ -17,7 +17,7 @@
     background-color: #dcdcd8;
 }
 
-.Code {
+.Code, code {
     background: #dfdfdf;
     padding: 0 4px;
     border-radius: 2px;

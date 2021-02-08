@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conditions</title>
+    <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<h1>Niveau 3</h1>
+<div class="Exercice">
+    <h2>Exercice 1</h2>
+    <p>
+        <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_logiques">
+            Conditions multiples en Javascript
+        </a>
+    </p>
+    <div class="Consignes">
+        <p>
+            Le but de l'exercice est d'afficher si on est majeur.e ou non en fonction de l'<code>age</code> et du
+            <code>pays</code>. Par exemple, si nous avons <code>19</code> ans, nous sommes majeur.e en
+            <code>France</code>
+            mais pas aux <code>USA</code>.
+        </p>
+        <p>Créer une condition de manière à ce que : </p>
+        <ul>
+            <li>
+                Si <code>pays</code> est égal à <code>France</code> et que <code>age</code> est supérieur à 18,
+                afficher 'Majeur.e'.
+            </li>
+            <li>
+                Si <code>age</code> est inférieur à 18, afficher "Mineur.e".
+            </li>
+            <li>
+                <code>pays = 'USA'</code> et <code>age < 21</code>, alors afficher "Mineur.e"
+            </li>
+            <li>
+                <code>age >= 21</code>, afficher "Majeur.e"
+            </li>
+        </ul>
+        <div class="Note">
+            <h3>Astuces</h3>
+            <p>
+                Vous pouvez utiliser les opérateurs logiques pour aligner plusieurs conditions à la suite.
+            </p>
+            <p>
+                Ici, pour être <code>Majeur.e</code>, il faut que le <code>pays</code> soit le bon,
+                ET que l'<code>age</code>. Il faut donc travailler avec l'opérateur <code>&&</code>.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="Exercice">
+    <h2>Exercice 2</h2>
+    <div class="Consignes">
+        <p>
+            Le but de l'exercice est d'annoncer si l'on peut entrer en boîte si les conditions suivantes sont
+            satisfaites :
+        </p>
+        <ul>
+            <li>L'<code>âge</code> est supérieur ou égal à <code>18</code></li>
+            <li>La <code>tenue</code> est égale à <code>'Correcte'</code></li>
+        </ul>
+        <div class="Notes">
+            <h3>Astuce</h3>
+            <p>Ici aussi, il sera possible d'utiliser l'opérateur <code>&&</code></p>
+        </div>
+    </div>
+</div>
+<div class="Exercice">
+    <h2>Exercice 3</h2>
+    <div class="Consigne">
+        <p>
+            Le but de l'exercice est d'afficher si la plante peut pousser ou non en fonction du <code>temps</code>
+            et de l' <code>humidite</code>.
+        </p>
+        <p>
+            La plante pourra pousser si :
+        </p>
+        <ul>
+            <li><code>humidite === 'ok'</code></li>
+            <li><code>temps === 'ok'</code></li>
+        </ul>
+        <p>Elle ne pourra pas pousser dans tous les autres cas.</p>
+        <div class="Note">
+            <h3>Astuce</h3>
+            <p>
+                Pour cet exercice, il est possible d'afficher "Ne peut pas pousser" si l'une des deux conditions
+                n'est pas vérifiée. Pour ça, il faut utiliser la notation <code>||</code>
+            </p>
+            <p>
+                "Si l'humidité n'est pas ok, ou le temps n'est pas ok".
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+
+
+  /**
+   * EXERCICE 1
+   */
+
+  let age = 20;
+  let pays = 'USA';
+
+  // TODO - Créer la condition multiple pour afficher 'Mineur.e'.
+
+  age = 25;
+
+  // TODO - Créer la condition multiple pour afficher 'Majeur.e'.
+
+  age = 19;
+  pays = 'France';
+
+  // TODO - Créer la condition multiple pour afficher 'Majeur.e'.
+
+
+  age = 19;
+  pays = 'France';
+  // TODO - Créer la condition multiple pour afficher 'Mineur.e'.
+
+
+  /**
+   * EXERCICE 2
+   */
+
+  let tenue = 'Astronaute';
+  age = 25;
+
+  // TODO - Créer la condition pour afficher "N'entre pas."
+
+  age = 17;
+  tenue = 'Correcte';
+
+  // TODO - Créer la condition pour afficher "N'entre pas."
+
+  age = 25;
+  // TODO - Créer la condition pour afficher "Peut entrer, pas de soucis."
+
+
+  /**
+   * EXERCICE 3
+   */
+
+  let humidite = 'ok';
+  let temps = 'Très chaud';
+
+  // TODO - Créer la condition pour afficher "Ne pousse pas".
+
+  humidite = 'Humide';
+  // TODO - Créer la condition pour afficher "Ne pousse pas".
+
+  temps = 'OK';
+  // TODO - Créer la condition pour afficher "Ne pousse pas".
+
+  humidite = 'OK'
+  // TODO - Créer la condition pour afficher "Peut pousser !".
+
+</script>
+</body>
+</html>

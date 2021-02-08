@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conditions</title>
+    <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<h1>Niveau 4</h1>
+<div class="Exercice">
+    <h2>Exercice 1</h2>
+    <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/switch">
+        Documentation sur l'utilisation de Switch
+    </a>
+    <p>Le but de cet exercice est d'économiser le code grâce à <code>switch</code></p>
+    <div class="Consignes">
+        <p>Modifier les longues structures de <code>if...else if ... else</code> dans le code pour réduire le code
+            en utilisatn <code>switch</code>.
+        </p>
+    </div>
+    <div class="Note">
+        <p><code>switch</code> n'est rien de plus qu'un <code>if ... else if ... else</code> compressé.</p>
+        <p>Le résultat doit rester le même !</p>
+    </div>
+</div>
+<script>
+
+    /*
+    EXERCICE 1
+     */
+
+    // TODO - Transformer la suite de if ... else pour la placer dans un Switch
+    const animal = 'lapin';
+
+    if (animal === 'chat') {
+      console.log("C'est un chat");
+    }
+    else if (animal === 'cochon') {
+      console.log("C'est un bon cochon");
+    }
+    else if (animal === 'chien') {
+      console.log("Qui veut jouer à la balle ?");
+    }
+    else if (animal === 'lapin') {
+      console.log("Miam miam la salade");
+    }
+    else {
+      console.log("Cet animal n'existe pas.");
+    }
+
+    /**
+     * EXERCICE 2
+     * TODO - Transformer la suite de conditions dans un switch
+     */
+
+    const age = 3;
+
+    if (age === 0) {
+      console.log("Je suis nul")
+    }
+    else if (age === 1) {
+      console.log("Je suis de 1 an");
+    }
+    else if (age === 2 || age === 3) {
+      console.log("J'y suis presque !");
+    }
+    else {
+      console.log("Je ne connais pas cet âge");
+    }
+
+
+</script>
+</body>
+</html>
