@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fonctions</title>
+    <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<h1>Niveau 3</h1>
+<div class="Exercice">
+    <h2>Exercice 1</h2>
+    <div class="Consignes">
+        <p>
+            Créer une fonction <code>afficheTexte</code> qui affiche le texte reçu en paramètre
+        </p>
+        <p>
+            Appeler cette fonction en lui envoyant le texte de votre choix
+        </p>
+        <div class="Note">
+            <p>Le résultat attendu est : </p>
+            <p>
+                <code>Le texte de votre choix</code>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="Exercice">
+    <h2>Exercice 2</h2>
+    <div class="Consignes">
+        <p>
+            <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/return">
+                Documentation sur l'utilisation des valeurs de retours de fonction
+            </a>
+        </p>
+        <p>
+            Créer une fonction <code>carre</code> qui renvoie la valeur du carré du nombre reçu en paramètre.
+        </p>
+        <p>
+            Créer une variable <code>nombreCarre</code> qui sera égale au résultat de la fonction <code>carre</code>
+            à laquelle on passe la variable <code>nombre</code>.
+        </p>
+        <p>
+            Afficher la variable <code>nombreCarre</code>
+        </p>
+        <div class="Note">
+            <p>Le résultat attendu est : </p>
+            <p>
+                <code>9</code>
+            </p>
+            <p>
+                Pour qu'une fonction renvoie une valeur, ne pas oublier d'utiliser <code>return</code>.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="Exercice">
+    <h2>Exercice 3</h2>
+    <div class="Consignes">
+        <p>
+            Remplir la fonction <code>afficheChat</code>
+        </p>
+        <p>
+            Ne pas toucher aux lignes qui appellent cette fonction. (S'il vous plaît)
+        </p>
+        <p>
+            Suivre les instructions notées au dessus du nom de la fonction <code>estUnChat</code>
+        </p>
+        <div class="Note">
+            <p>Le résultat attendu est : </p>
+            <p>
+                <code>"Ce n'est pas un chat !"</code>
+            </p>
+            <p>
+                <code>"C'est bien un chat"</code>
+            </p>
+            <p>
+                <code>"Ce n'est pas un chat."</code>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    const nombre = 3;
+
+    /**
+     * Ne pas toucher.
+     * Le résultat attendu est noté après l'appel de la fonction
+     */
+    let monAnimal = 'Lapin';
+    estUnChat(monAnimal); // Résultat attendu : 'Ce n'est pas un chat !';
+
+    monAnimal = 'chat';
+    estUnChat(monAnimal); // Résultat attendu : 'C'est bien un chat';
+
+    monAnimal = 'chien';
+    estUnChat(monAnimal); // 'Ce n'est pas un chat !';
+
+
+
+    /**
+     * Cette fonction analyser le contenu du paramètre animal.
+     * Si animal est égal à "chat", alors afficher dans la console "C'est bien un chat."
+     * Sinon, afficher "Ce n'est pas un chat !".
+     * @param animal String, l'animal à analyser.
+     */
+    function estUnChat(animal) {
+
+    }
+
+</script>
+</body>
+</html>

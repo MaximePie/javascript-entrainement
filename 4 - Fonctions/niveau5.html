@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fonctions</title>
+    <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<h1>Niveau 3</h1>
+<div class="Exercice">
+    <h2>Exercice 1</h2>
+    <div class="Consignes">
+        <p>
+            Remplir la fonction <code>prixTaxeHabitation</code> en lui ajoutant les paramètres désignés dans le
+            commentaire de documentation
+        </p>
+        <div class="Note">
+            <p>
+                <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_d%C3%A9faut_des_arguments">
+                    Comment envoyer un paramètre optionnel ?
+                </a>
+            </p>
+            <p>Le résultat attendu est : </p>
+            <p>
+                <code>350</code>
+            </p>
+            <p>
+                <code>700</code>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="Exercice">
+    <h2>Exercice 2</h2>
+    <div class="Consignes">
+        <p>
+            Remplir la fonction <code>rizCursive</code>
+        </p>
+        <div class="Note">
+            <p>
+                <a href="https://onechapteraday.fr/javascript-recursive-functions/">
+                    Comment créer une fonction récursive en JS ?
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+
+  let prixTotal = 700;
+  let coloc1 = 'Donald Trump';
+  let coloc2 = 'Kardashian';
+
+  console.log(prixTaxeHabitation(prixTotal, payeur1, payeur2)); // 350
+  console.log(prixTaxeHabitation(prixTotal, payeur1)); // 700
+  console.log(prixTaxeHabitation(prixTotal, payeur2)); // 700
+
+  /**
+   *
+   * Cette fonction va déterminer un prix à payer par personne pour la taxe d'habitation en fonction du nombre de
+   * payeurs présents.
+   *
+   * Si payeur1 et payeur2 sont différents de null, renvoyer le résultat du prix divisé par 2.
+   * Sinon, renvoyer le prix.
+   *
+   * @param prix Number le prix total à payer.
+   * @param payeur1 String Le nom du premier payeur
+   * @param payeur2 String le nom du deuxième payeur, il peut être nul.
+   */
+  function prixTaxeHabitation(prix, payeur1, payeur2 = null) {
+
+  }
+
+
+
+  /**
+   * EXERCICE 2
+   */
+
+  console.log(rizCursive()); // "rizrizrizrizrizrizrizrizrizriz" (10 fois)
+  console.log(rizCursive("salade", 5)); // "saladerizrizrizrizriz" ("salade" + "riz" 5 fois)
+  console.log(rizCursive("", 8)); // "rizriz";
+
+
+  /**
+   * Cette fonction va
+   * - créer une variable chaineActuelle qui sera égale à la chaîne à laquelle on ajoute "riz".
+   * - créer une variable iterationActuelle qui sera égale à la iterations + 1
+   * Si iterations est supérieur ou égal à 10, renvoyer la chaîne.
+   * Sinon, appeler la fonction rizCursive, en lui envoyant la variable chaineActuelle et iterationActuelle.
+   * @param chaine Le texte que l'on souhaite construire pour qu'il contienne beaucoup de fois le mot "riz".
+   * @param iterations Le nombre de fois que l'on a déjà ajouté riz à notre structure.
+   */
+  function rizCursive(chaine = '', iterations = 0) {
+
+  }
+</script>
+</body>
+</html>

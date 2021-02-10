@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fonctions</title>
+    <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<h1>Niveau 4</h1>
+<div class="Exercice">
+    <h2>Exercice 1</h2>
+    <div class="Consignes">
+        <p>
+            Remplir la fonction <code>additionne</code>
+        </p>
+        <div class="Note">
+            <p>Le résultat attendu se situe en commentaire après l'appel de la fonction.</p>
+        </div>
+    </div>
+</div>
+<div class="Exercice">
+    <h2>Exercice 2</h2>
+    <div class="Consignes">
+        <p>
+            Remplir la fonction afficheReste
+        </p>
+        <p>
+            <a href="https://www.google.com/search?q=JS+afficher+reste+division&rlz=1C1CHBF_frFR884FR884&oq=JS+afficher+reste+division&aqs=chrome..69i57j33i160.7249j0j7&sourceid=chrome&ie=UTF-8">
+                Comment afficher le reste d'une division en Javascript ?
+            </a>
+        </p>
+    </div>
+</div>
+<div class="Exercice">
+    <h2>Exercice 3</h2>
+    <div class="Consignes">
+        <p>
+            Remplir la fonction <code>isAdult</code>
+        </p>
+        <div class="Note">
+            <p>Le résultat attendu est : </p>
+            <p>
+                <code>'Adult'</code>
+            </p>
+            <p>
+                <code>'Minor'</code>
+            </p>
+            <p>
+                <code>'Minor'</code>
+            </p>
+            <p>
+                <code>'Adult'</code>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+
+  /**
+   * EXERCICE 1
+   */
+  let result = 0;
+  result = additionne(5, 19);
+  console.log(result); // 24;
+
+  result = additionne(2, 24);
+  console.log(result); // 26;
+
+  result = additionne(-8, -48);
+  console.log(result); // -56;
+  result = additionne('Chien', 15);
+  console.log(result); // Afficher une erreur dans la console, et result doit être égal à null;
+  result = additionne(5, null);
+  console.log(result); // 5;
+
+  result = additionne(5 * 5, 3 * 3);
+  console.log(result); // 34
+
+
+  /**
+   * Additionne les deux nombres reçus en paramètre et renvoie le résultat
+   * Si un des deux paramètres n'est pas un nombre, ne rien renvoyer, et afficher une erreur dans la console.
+   * @param premierNombre
+   * @param secondNombre
+   */
+  function additionne(premierNombre, secondNombre) {
+    // TODO - à vous de jouer !
+  }
+
+
+  /**
+   * EXERCICE 2
+   */
+
+  afficheReste(5, 2); // 1
+  afficheReste(8, 2); // 0
+  afficheReste(7, 4); // 3
+
+
+  /**
+   * Affiche le reste de la division du premier nombre par le deuxième.
+   * @param premierNombre
+   * @param secondNombre
+   */
+  function afficheReste(premierNombre, secondNombre) {
+
+  }
+
+
+  /**
+   * EXERCICE 3
+   */
+
+  let age = 19;
+  let country = "France";
+  console.log(isAdult(age, country) ? 'Adult': 'Minor'); // Adult
+
+  country = "USA";
+  console.log(isAdult(age, country) ? 'Adult': 'Minor'); // Minor
+
+  country = "France";
+  age = 17;
+  console.log(isAdult(age, country) ? 'Adult': 'Minor'); // Minor
+
+  country = "USA";
+  age = 25;
+  console.log(isAdult(age, country) ? 'Adult': 'Minor'); // Adult
+
+
+  /**
+   * Cette fonction va analyser l'âge et le pays reçus en paramètre et
+   * renvoie true si cela correspond à une personne
+   * majeure, et false sinon.
+   * Pour qu'une personne soit considérée comme mineure, elle doit :
+   * Avoir moins de 21 ans aux USA.
+   * Avoir moins de 18 ans en France.
+   * @param age
+   * @param country
+   */
+  function isAdult(age, country) {
+
+  }
+
+</script>
+</body>
+</html>

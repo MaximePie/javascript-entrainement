@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fonctions</title>
+    <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<h1>Niveau 2</h1>
+<div class="Exercice">
+    <h2>Exercice 1</h2>
+    <p>
+        <a href="https://www.w3schools.com/js/js_function_parameters.asp">
+            Gestion des paramètres en Javascript
+        </a>
+    </p>
+    <div class="Consignes">
+        <p>
+            Appeler la fonction <code>direBonjour</code> en lui envoyant la chaîne de caractères <code>'Marlaine'</code>
+        </p>
+        <div class="Note">
+            <p>Le résultat attendu est : </p>
+            <p>
+                <code>Bonjour Marlaine</code>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="Exercice">
+    <h2>Exercice 2</h2>
+    <div class="Consignes">
+        <p>
+            Appeler la fonction <code>direBonjour</code> en lui envoyant comme paramètre la variable <code>name</code>
+        </p>
+        <div class="Note">
+            <p>Le résultat attendu est : </p>
+            <p>
+                <code>Bonjour Bobby</code>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="Exercice">
+    <h2>Exercice 3</h2>
+    <div class="Consignes">
+        <p>
+            Appeler la fonction <code>concatene</code> en lui envoyant les trois <code>mot</code> en paramètres.
+        </p>
+        <div class="Note">
+            <p>Le résultat attendu est : </p>
+            <p>
+                <code>J'aimeleJS (c'est vrai)</code>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+
+  const name = 'Bobby';
+
+  const mot1 = "J'aime";
+  const mot2 = "Le";
+  const mot3 = "JS (c'est vrai)";
+
+  // TODO - Appeler la fonction direBonjour ici.
+
+
+  /**
+   * Cette fonction affiche "Bonjour" suivi du nom reçu en paramètre.
+   * @param nom Contient le nom que l'on passe par la fonction quand on l'appelle.
+   */
+  function direBonjour(nom) {
+    console.log("Bonjour " + nom);
+  }
+
+  /**
+   * Cette fonction concatène les trois chaînes de caractères reçues en paramètre et affiche le résultat.
+   */
+  function concatene(chaine1, chaine2, chaine3) {
+    console.log(chaine1 + chaine2 + chaine3);
+  }
+
+</script>
+</body>
+</html>
