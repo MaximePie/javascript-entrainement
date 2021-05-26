@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Les p'tits orcs</title>
+</head>
+<body>
+<div>
+  <h2>L'orc dit : Baissez les yeux, ça se passe dans le script, pas dans le HTML !</h2>
+</div>
+<script>
+  class Creature {
+    constructor(name, age, strength) {
+      this.name = name;
+      this.age = age;
+      this.strength = strength;
+    }
+
+    saySomething(sentence) {
+      console.log(sentence);
+    }
+
+    identity() {
+      console.log(`Age : ${this.age}  Name : ${this.name}`);
+    }
+  }
+
+  class Orc extends Creature {
+    constructor(name, age, strength) {
+      super(name, age, strength);
+    }
+
+    scream(sentence) {
+      console.log(sentence.toUpperCase());
+    }
+
+    bite(someone) {
+      console.log(`Coucou je mords ${someone.name}`);
+      someone.scream("aaaah");
+    }
+  }
+
+  class Urukhai extends Orc {
+    constructor(name, strength, age = 0) {
+      super(name, null, strength);
+      this.strength += 10;
+    }
+
+    // Pour vérifier le typage automatiquement, utiliser Typescrpipt;
+    kill(someone) {
+      if (someone.name) {
+        console.log(`Je tue quelqu'un, et ce quelqu'un est ${someone.name}`);
+      }
+      else {
+        console.log("Someone n'est pas un objet, ou n'a pas de propriété name");
+      }
+    }
+  }
+
+  class ChiefOrc extends Orc {
+    constructor(name, strength, age = 0) {
+      super(name, strength, age);
+      this.strength += 2;
+      this.isChief = true;
+    }
+
+    giveOrder(someone) {
+      if (someone.name) {
+        console.log(`Attaque : ${someone.name}`)
+      }
+      else {
+        console.log("Someone.name n'existe pas.");
+      }
+    }
+  }
+
+  const Bob = new Orc("Bobby", 488, -8);
+
+  // Destructuration
+  const {age, strength} = Bob;
+
+  Bob.saySomething("Coco veut du gâteau");
+  Bob.saySomething("7484848848484");
+
+  Bob.identity();
+  Bob.scream("Coco veut du gâteau");
+
+  const Charlotte = new Orc("Charlotte", 220, 50);
+  Bob.bite(Charlotte);
+
+  const Tartempion = new Urukhai("Tartempion", 50, 2);
+  Tartempion.kill(Charlotte);
+  Tartempion.kill(Bob);
+
+  // Tartempion.kill("haha"); // Error
+  const Bouya = new ChiefOrc("Bouya", 50);
+  Bouya.identity();
+  Bouya.giveOrder(Tartempion);
+
+</script>
+</body>
+</html>
