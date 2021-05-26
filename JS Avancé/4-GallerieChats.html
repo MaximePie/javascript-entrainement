@@ -16,56 +16,64 @@
 <div>
   <div class="Exercice">
     <div class="Consignes">
-      <p>Dans cet exercice nous allons afficher la liste des sports Olympiques de 2024 !</p>
+      <p>Créer une gallerie d'affichage de photos de chats, qui va aller interroger l'API catApi.</p>
       <ul>
-        <li>Consulter le fichier <code>sportsData</code>, et exporter les sports</li>
-        <li>Dans <code>3-Sports.html</code>, importer tous les sports depuis <code>sportsData</code></li>
-        <li>Fusionner tous les sports importés dans un seul tableau <code>sportsList</code></li>
-        <li>Pour chaque sport présent dans la liste, afficher le sport avec ses informations dans une balise <code>p</code></li>
+        <li>Créer un bouton qui va déclencher une méthode <code>fetchCats</code>au click.</li>
+        <li>En utilisant <code>fetch</code>, interroger l'API des chats</li>
+        <li>Afficher l'image récupérée sur la page HTML</li>
+        <li>Essayez de modifier la fonction de récupération des données de manière à afficher les chats 4 par 4</li>
+        <li>Ajouter un mécanisme permettant de choisir si on souhaite obtenir un GIF, ou bien une image fixe</li>
       </ul>
-    </div>
-    <div class="Astuce">
-      <h4>Astuce</h4>
-      <p>Trouvez des informations sur les forums, testez, évaluez, et choisissez le code qui vous correspond le mieux.</p>
-    </div>
-    <div class="Note">
-      <h4>Ressources</h4>
-      <ul>
-        <li>
-          <a href="https://www.paris2024.org/fr/sports-les-sports-olympiques/">
-            Liste des sports 2024
+      <div class="Note">
+        <h4>Ressources</h4>
+        <ul>
+          <li>
+            <a href="https://docs.thecatapi.com/">
+              Documentation de l'API qui fournit les photos de chat
+            </a>
+            <a href="https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch">
+              Qu'est-ce que fetch ?
+            </a>
+            <a href="https://www.redhat.com/fr/topics/api/what-are-application-programming-interfaces">
+              Qu'est-ce qu'une API ?
+            </a>
+            <a href="https://qxf2.com/blog/api-testing-developer-tools/">
+              Comment consulter les échanges avec une API depuis le navigateur ?
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="Note">
+        <h4>Astuce</h4>
+        <p>Cet exercice est difficile, prenez votre temps étape par étape. Vous allez y arriver !</p>
+        <p><code>fetch</code> permet de récupérer des données.</p>
+        <p>Exemple : </p>
+        <p>
+          <code>fetch('http://haha.com/haha')</code>
+          envoie une requête à l'adresse `'http://haha.com/haha'`.
+        </p>
+        <p>Si cette adresse correspond à une adresse de backend, alors l'API peut renvoyer des données.</p>
+        <p>
+          Essayez avec
+          <a href="https://api.thecatapi.com/v1/images/search">
+            https://api.thecatapi.com/v1/images/search
           </a>
-        </li>
-        <li>
-          <a href="https://stackoverflow.com/questions/38340500/export-multiple-classes-in-es6-modules">
-            Exporter plusieurs modules dans le même fichier
-          </a>
-        </li>
-        <li>
-          <a href="https://gist.github.com/yesvods/51af798dd1e7058625f4">
-            Fusionner des tableaux
-          </a>
-        </li>
-      </ul>
+          pour voir !
+        </p>
+        <p><code>fetch("https://api.thecatapi.com/v1/images/search")</code></p>
+        <p>Vous pouvez consulter le résultat dans l'inspecteur du navigateur, dans l'onglet Network</p>
+        <ul>
+          <li>
+            Pour choisir entre GIF et photo, vous pouvez utiliser <code>select</code> de HTML,
+            et déclencher un événement <code>onChange</code> quand on choisit une valeur.
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="Exercice">
-    <div class="Consignes">
-      <p>Mettre en place un mécanisme qui permette à l'utilisateur de modifier : </p>
-      <ul>
-        <li>Le nom d'un sport</li>
-        <li>Le nombre de joueurs d'un sport</li>
-        <li>S'il est en équipe ou non avec une <code>checkbox</code></li>
-        <li>Sa description</li>
-        <li>Les lieux praticables (intérieur, extérieur)</li>
-      </ul>
-      <p>Le sport est instantanément modifié quand l'utilisateur change quoi que ce soit</p>
-      <p>Quand on recharge la page, les sports reviennent à leur état initial</p>
-    </div>
-    <div class="Note">
-      <h4>Astuces</h4>
-      <p>Utilisez les classes pour mieux organiser votre code</p>
-    </div>
+    <p>
+      Résultat attendu :
+    </p>
+    <img src="./catsResults.png" alt="Gallerie de chats">
   </div>
 </div>
 <script type="module">
