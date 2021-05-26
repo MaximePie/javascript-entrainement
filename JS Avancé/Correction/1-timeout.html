@@ -63,35 +63,67 @@
       Durée
       <input placeholder="secondes" type="text" id="duration"/>
     </label>
+    <p id="remainingTime"></p>
     <button id="triggerCountdown">Déclencher</button>
   </div>
 </div>
 <script>
   const triggerButton = document.getElementById("triggerCountdown");
+  const remainingTimeElement = document.getElementById("remainingTime");
+  let minuteur = undefined;
+  let remainingTimeInterval = undefined;
 
   triggerButton.addEventListener("click", () => {
     // setTimeout = Début du minuteur de 2 secondes.
     // à la fin des deux secondes, il déclenche la fonction
     const durationElement = document.getElementById("duration");
+
+
+    if (durationElement) {
+      disableButton();
+      // const value = durationElement.value
+      const {value} = durationElement;
+
+      remainingTimeElement.innerText = value;
+      remainingTimeInterval = setInterval(removeOneSecond, 1000);
+
+      minuteur = setTimeout(timerEnded, value * 1000);
+    }
+  });
+
+  /**
+   * Cette méthode retire une seconde à
+   */
+  function removeOneSecond() {
+    const currentInnerText = parseInt(remainingTimeElement.innerText);
+    remainingTimeElement.innerText = `${currentInnerText - 1}`;
+  }
+
+  /**
+   * Cette fonction désactive le bouton
+   */
+  function disableButton() {
     // triggerButton.style.pointerEvents = "none";
     triggerButton.disabled = true;
     triggerButton.style.cursor = "not-allowed";
+  }
 
-    if (durationElement) {
-      const {value} = durationElement;
-      // const value = durationElement.value
-      const minuteur = setTimeout(function () {
-        const audio = new Audio('./beep.mp3');
-        audio.play();
-        alert("Temps écoulé");
-        triggerButton.disabled = false;
-        // triggerButton.style.pointerEvents = "initial";
+  /**
+   * Cette fonction est appelée une fois que le timeout est écoulé
+   */
+  function timerEnded() {
+    const audio = new Audio('./beep.mp3');
+    audio.play();
+    alert("Temps écoulé");
+    triggerButton.disabled = false;
+    // triggerButton.style.pointerEvents = "initial";
 
-        // Ne pas oublier de clear le timeout à la fin :
-        // https://www.w3schools.com/jsref/met_win_cleartimeout.asp
-      }, value * 1000);
-    }
-  });
+    // Ne pas oublier de clear le timeout à la fin :
+    // https://www.w3schools.com/jsref/met_win_cleartimeout.asp
+    clearTimeout(minuteur);
+    clearInterval(remainingTimeInterval);
+    remainingTimeElement.innerText = '';
+  }
 </script>
 </body>
 </html>
