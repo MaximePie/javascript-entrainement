@@ -1,4 +1,3 @@
-
 const coopGames = [
   {
     name: "Football",
@@ -39,5 +38,3 @@ const soloGames = [
     playablePlaces: ["Intérieur"],
   },
 ]
-export {coopGames}
-export {soloGames}
