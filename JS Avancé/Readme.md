@@ -123,3 +123,46 @@ Il est également possible de communiquer une fonction à exécuter en ne passan
 
 `setInterval(direBonjour, 1000)`
 
+
+## Jour 3 
+
+### Exercices réalisés 
+
+- Créer un système d'affichage de menu (100%)
+- Présenter npm et http-server
+- Créer et modifier une liste de sports (50%)
+- Créer une interface d'affichage de photos de chats (25%)
+
+### Ce qu'il faut retenir 
+
+#### NPM
+
+| `npm init`                          | Crée un package.json, à lancer au début de chaque projet                                                                                                                                                                                                   |
+|-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `npm install http-server axios`     | Installe les librairies HTTP server, et axios.  Ces librairies se retrouvent dans la section Dependencies de  notre `package.json`.                                                                                                                        |
+| `npm install` ou `npm i`            | Installe toutes les dépendances présentes dans le `package.json`  et génère un `package-lock.json`, et un `node_modules`                                                                                                                                   |
+| `npm -v`                            | Affiche la version courante de NPM qui est installée.  Si NPM n'est pas installé, on peut l'installer en  allant sur [ce lien](https://nodejs.org/en/). (Recommended version)                                                                              |
+| `npm start`                         | Démarre le script `start` présent dans votre `package.json`. Si vous n'avez pas de script, ce n'est pas grave.  [Comment créer un script npm ?](https://docs.npmjs.com/cli/v7/using-npm/scripts)                                                           |
+| Qu'est-ce que node_modules?         | Un gros dossier avec toutes les dépendances. Comme ce n'est pas nous qui les codons, pas besoin de les versionner, ni de les partager.  Pour générer le dossier : `npm install`.                                                                           |
+| Qu'est-ce que `package.json` ?      | Un tout petit fichier qui contient la liste des dépendances et les scripts de notre application. C'est ça qu'on doit passer à nos collègues si on travaille ensemble, et non le dossier `node_modules`.  Attention, ce fichier ne doit pas être supprimé ! |
+| Qu'est-ce que `package-lock.json` ? | Une attestation d'installation. Il contient des informations faciles à lire par npm pour éviter de réinstaller ce qui est déjà installé.  Il peut être supprimé en toute sécurité                                                                          |
+
+
+#### Cors et mimetypes 
+
+- Le navigateur considère tous les modules comme des fichiers potentiellement dangereux. Donc il les bloque.
+
+- Pour résoudre l'erreur, il faut passer par un serveur (Wamp, Mamp, ou http-server)
+
+
+#### Manipulation de l'interface (DOM)
+
+- Pour injecter un élément HTML dans la page avec JS, une bonne pratique est de procéder comme ceci : 
+    1. On crée notre élément `const monPlat = document.createElement('p')`
+    2. On lui ajoute sa tambouille : `monPlat.id = "plat1"; monPlat.addEventListener("click", () => {}); monPlat.innerText = "Grosse andouille";`
+    3. On cible l'élément parent, et on lui injecte le plat : `document.getElementById("listePlats").appendChild(p)`
+
+
+- L'utilisation de la structure `Map` permet de manipuler facilement des données sous la forme de paires
+`clé-valeur`, ce qui augmente grandement les performances sous certaines conditions : 
+Il faut connaître la clé en question pour accéder à la valeur. 
