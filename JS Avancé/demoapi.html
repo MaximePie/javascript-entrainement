@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fetch et api</title>
+</head>
+<body>
+<p>Bonjour ici</p>
+<button id="fetchData">Récupérer</button>
+</body>
+
+<script>
+  /*  fetch("https://swapi.dev/api/starships/9/").then(data => data.json()).then(jsonData => {
+
+    })*/
+
+  document.getElementById("fetchData").addEventListener("click", async function() {
+    const info = await fetch("https://swapi.dev/api/starships/9/")
+      .then(function (informations) {
+        // Conversion des données en JSON
+        console.log("C'est bon, la requête est terminée");
+        if (informations.status !== 200) {
+          // Il y a eu une erreur
+        } else {
+          // On return, et ça va dans la valeur jsonInfo
+          return informations.json();
+        }
+      })
+      .then(function (jsonInfo) {
+        // Traitement des données
+        console.log(jsonInfo);
+        const characterName = document.createElement('p');
+        characterName.innerText = jsonInfo.name;
+        document.body.appendChild(characterName);
+
+        return jsonInfo;
+      });
+
+    console.log(info);
+  })
+
+  // async function fetchData() {
+  //   /* Corps de la fonction ici */
+  // }
+</script>
+</html>
