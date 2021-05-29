@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="../../style.css"/>
   <title>Gallerie des chats</title>
   <!--
     Cet exercice permet de travailler les compétences suivantes :
@@ -11,6 +11,17 @@
     Manipulation des fonctions
     Manipulation des objets
   -->
+  <style>
+    .Cats {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .Cats img {
+      width: 200px;
+      margin: 1rem;
+    }
+  </style>
 </head>
 <body>
 <div>
@@ -76,14 +87,44 @@
         </ul>
       </div>
     </div>
+    <div>
+      <button id="fetchGifs">GIFS</button>
+      <button id="fetchPictures">Photos</button>
+      <button id="fetchCats">Les deux</button>
+    </div>
+    <div id="cats" class="Cats">
+
+    </div>
     <p>
       Résultat attendu :
     </p>
-    <img src="./catsResults.png" alt="Gallerie de chats">
+    <img src="../catsResults.png" alt="Gallerie de chats">
   </div>
 </div>
 <script type="module">
 
+  const fetchGifs = document.getElementById("fetchGifs");
+  const fetchPictures= document.getElementById("fetchPictures");
+  const fetchCatsButton = document.getElementById("fetchCats");
+  fetchGifs.addEventListener("click", () => fetchCats("gif"));
+  fetchPictures.addEventListener("click", () => fetchCats("png,jpg"));
+  fetchCatsButton.addEventListener("click", () => fetchCats());
+
+
+  function fetchCats(mimeType = "gif,png,jpg") {
+    const url = `https://api.thecatapi.com/v1/images/search?limit=4&mime_types=${mimeType}`;
+    const catsList = document.getElementById("cats");
+    catsList.innerHTML = null;
+    fetch(url).then((rawData) => rawData.json()).then(formatedData => {
+
+      formatedData.forEach(cat => {
+        const imageElement = document.createElement("img");
+        imageElement.src = cat.url;
+        imageElement.alt = "Cat picture";
+        catsList.appendChild(imageElement);
+      })
+    });
+  }
 </script>
 </body>
 </html>
