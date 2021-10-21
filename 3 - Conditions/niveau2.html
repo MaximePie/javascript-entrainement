@@ -20,7 +20,7 @@
         <ul>
             <li>
                 Si la variable <code>plat</code> est égale à <code>'crevettes'</code>,
-                afficher <code>"Oh Oui !"</code> dans la console
+                afficher <code>"Ouiiii !"</code> dans la console
             </li>
             <li>Sinon afficher <code>"Oh non".</code></li>
         </ul>
@@ -47,17 +47,21 @@
             </li>
         </ul>
     </div>
+    <div class="Note">
+        <h4>Ressources</h4>
+        <p>Plus d'informations sur <a href="https://www.w3schools.com/Jsref/jsref_parsefloat.asp">ParseFloat</a></p>
+    </div>
 </div>
 <script>
 
   /**
    * EXERCICE 1
    */
-  let plat = "crevette";
+  let plat = prompt("Un p'tit plat ?");
 
     // TODO - Créer la condition ici
 
-    plat = "patates";
+    plat = prompt("Un p'tit plat ?");
 
     // TODO - Créer la condition ici aussi
 
@@ -66,9 +70,10 @@
    * EXERCICE 2
    */
 
-  let temperature = 25;
+  // Plus d'informations sur parseFloat https://www.w3schools.com/Jsref/jsref_parsefloat.asp
+  let temperature = parseFloat(prompt("Quelle est la température ?"));
 
-  // TODO - Créer les conditions ici, trois fois de suite de manière à afficher successivement 'Trop chaud', 'Trop froid", et 'Parfait'
+  // TODO - Créer les conditions ici, trois fois de suite de manière à afficher 'Trop chaud', 'Trop froid", et 'Parfait'
 
 </script>
 </body>

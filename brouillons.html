@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<header>
+  <div class="shred">
+    <i class="fas fa-address-book"></i>
+  </div>
+  <h1>Baba Book</h1>
+  <hr>
+  <ul class="row" id="address-book"></ul>
+</header>
+
+<section>
+  <button id="save">Sauvegarder un baba</button>
+  <button id="displayInConsole">Afficher les baba dans la console</button>
+</section>
+
+<script>
+  document.getElementById("save").addEventListener("click", save);
+  document.getElementById("displayInConsole").addEventListener("click", display);
+
+  /**
+   * Cette fonction sauvegarder un texte "okjs" dans le Local Storage
+   */
+  function save() {
+    // Créer une chaîne de caractères "baba"
+    const myText = "baba";
+
+    // Ajouter "baba" à la liste des babas
+    const existingBabas = localStorage.getItem("text");
+    console.log(existingBabas);
+
+    let babas;
+    let JsonBabas;
+
+    // Vérifier que le talbeau existe, et que c'est bien du type tableau
+    // if (existingBabas?.length !== 0) { // Optionnal chaining
+    if (existingBabas) {
+      // Convertissage en tableau
+      babas = JSON.parse(existingBabas);
+    }
+    else {
+      babas = [];
+    }
+
+    // Ajouter l'élément au tableau
+    babas.push(myText);
+
+    // Convertir le tableau
+    JsonBabas = JSON.stringify(babas);
+    // Ajouter le tableau converti dans le LocalStorage
+    localStorage.setItem("text", JsonBabas);
+    console.log(localStorage.getItem("text"));
+
+
+    // const user = {
+    //   firstname: "haha",
+    //   lastname: "haha",
+    //   age: 5,
+    // }
+    //
+    // console.log(user.firstname);
+    //
+    // const stringifiedUser = JSON.stringify(user);
+    // console.log(user);
+    // console.log(stringifiedUser)
+    //
+    // const notes = [5,6,8];
+    // console.log(notes);
+    // console.log(JSON.stringify(notes));
+  }
+
+  /**
+   * Cette fonction récupère la valeur stockée dans le Local Storage, et l'affiche dans la console.
+   */
+  function display() {
+    console.log(JSON.parse(localStorage.getItem("text")))
+  }
+</script>
+</body>
+</html>
