@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tableaux</title>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<h1>Niveau 4 - Autres fonctionnalités des tableaux</h1>
+<div class="Exercice">
+  <h2>Exercice 1 - Accéder à la longueur du tableau</h2>
+  <p>Parce que Javascript nous met à disposition tout plein d'informations</p>
+  <div class="Consignes">
+    <p>Afficher dans la console la longueur du tableau <code>heroes</code></p> en utilisant <code>length</code>
+  </div>
+  <div class="Note">
+    <h4>Ressources</h4>
+    <p>
+      <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length">
+        Accéder à la longueur d'un tableau en JS
+      </a>
+    </p>
+  </div>
+</div>
+<div class="Exercice">
+  <h2>Niveau 2 - Créer un tableau de tableaux</h2>
+  <p>Un tableau contient plusieurs valeurs du même type. Si les valeurs sont elles-mêmes des tableaux,
+    alors il est possible de créer des tableaux de tableaux !
+  </p>
+  <div class="Consignes">
+    <p>Créez un gros panier de courses qui va contenir des ingrédients de manière à ce que : </p>
+    <ul>
+      <li>Chaque ingrédient se trouve dans un tableau de sa catégorie
+        (<code>frais</code>, <code>légumes</code>, ou <code>épicerie</code>)
+      </li>
+      <li>Chaque catégorie représente un élément du tableau <code>panierCourses</code></li>
+    </ul>
+
+    <p>Afficher la valeur "steak Soja"</p>
+    <p>Afficher la valeur "pâtes"</p>
+  </div>
+  <div class="Note">
+    <h4>Résultat attendu : </h4>
+    <p>
+      <code>console.log(panier)</code>
+    </p>
+    <p>
+      <code>[["bison", "steak soja"], ["patates", "carottes", "courgettes"], ["pâtes", "sel", "Sucre"]]</code>
+    </p>
+  </div>
+  <div class="Note">
+    <h4>Astuce</h4>
+    <p>Vous pouvez commencer par créer et remplir les tableaux de catégories</p>
+    <p>Une fois que vous les avez, remplissez le tableau <code>panier</code>.</p>
+  </div>
+  <div class="Note">
+    <h4>Astuce</h4>
+    <p>Un tableau qui contient un tableau s'appelle "tableau à deux dimensions"</p>
+    <p>Car pour accéder à un élément, il faut saisir <code>deux index</code>.</p>
+    <p><code>console.log(tableau[0][2])</code></p>
+  </div>
+</div>
+<script>
+  // Exercice 1
+  // TODO - De combien d'éléments dispose ce tableau ?
+  const heroes = [
+    "Achille",
+    "Bellérophon",
+    "Héraclés",
+    "Jason",
+    "Oedipe",
+    "Persée",
+    "Thésée",
+    "Ulysse",
+  ]
+
+  // Exercice 2
+  // Liste de courses : "bison", "sel", "patates", "carottes", "steak soja", "courgettes", "pâtes", "Sucre"
+
+</script>
+<script src="../scriptPasToucher.js"></script>
+</body>
+</html>

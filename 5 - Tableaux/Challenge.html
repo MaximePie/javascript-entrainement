@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tableaux</title>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<h1>Challenge - Manipuler des tableaux</h1>
+<div class="Exercice">
+  <h2>Exercice 1 - Trier des tableaux</h2>
+  <p>Il est possible de recréer un tableau à partir d'un tableau existant avec une fonctionnalité de
+    <code>triage</code></p>
+  <div class="Consigne">
+    <ul>
+      <li>Triez le tableau <code>compteARebours</code> dans l'ordre croissant avec la méthode <code>sort</code></li>
+    </ul>
+  </div>
+  <div class="Note">
+    <h4>Ressources</h4>
+    <p><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">Comment
+      filtrer un tableau ?</a></p>
+  </div>
+  <div class="Note">
+    <h4>Astuces</h4>
+    <p>N'hésitez pas à consulter plusieurs exemples sur internet pour vous faire une idée</p>
+    <p>Utilisez la console de développement pour apprendre à maîtriser la fonction dans un premier temps</p>
+  </div>
+  <div class="Note">
+    <h4>Astuces</h4>
+    <p>Réfléchissez au résultat souhaité, et à toutes les étapes qui permettent d'arriver à ce résultat</p>
+  </div>
+  <div class="Note">
+    <h4>Astuces</h4>
+    <p>La fonction <code>trier</code> prend en paramètre une fonction qui va décrire un comportement <strong>
+      pour chaque élément du tableau.
+    </strong></p>
+    <p>Autrement dit, elle va prendre deux éléments, les comparer, et dire "oui" ou "non" en fonction des
+      conditions.</p>
+    <p>"oui" signifie "on garde" cet ordre</p>
+    <p>"non" signifie "on échange" ces deux éléments</p>
+  </div>
+</div>
+<div class="Exercice">
+  <h2>Exercice 2 - Filtrer un tableau</h2>
+  <p>Dehors les pairs !</p>
+  <div class="Consignes">
+    <p>Filtrez le tableau <code>listeNombres</code> de manière à ce que : </p>
+    <ul>
+      <li>le tableau ne contienne plus que des nombres entiers pairs.</li>
+      <li>Il faut donc retirer tous les nombres qui sont soit <code>impairs</code>, soit <code>à virgule</code></li>
+    </ul>
+  </div>
+  <div class="Note">
+    <h4>Ressources</h4>
+    <p><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Comment
+      filtrer un tableau en JS ?</a></p>
+    <p><a href="https://css-tricks.com/snippets/javascript/check-if-number-is-evenodd/">
+      Comment savoir si un nombre est pair en JS ?
+    </a></p>
+    <p>
+      <a
+        href="https://www.geeksforgeeks.org/javascript-number-isinteger-function/#:~:text=The%20Number.,%2C%20otherwise%2C%20it%20returns%20false.">
+        Comment savoir si un nombre est un nombre entier en JS ?
+      </a>
+    </p>
+  </div>
+  <div class="Note">
+    <h4>Astuces</h4>
+    <p>Vous pouvez utiliser une <strong>condition multiple</strong> pour déterminer si on garde, ou non, un élément.</p>
+  </div>
+</div>
+<div class="Exercice">
+  <h2>Exercice 3 - Filtrer et trier un tableau</h2>
+  <p>Roh la la, zut alors, il y a des types de partout dans ce tableau ! Nettoyez-le, et triez-le.</p>
+  <div class="Consigne">
+    <ul>
+      <li>Filtrez le tableau <code>bazar</code> pour ne garder que les <strong>nombres entiers</strong></li>
+      <li>Triez le tableau <code>bazar</code> dans l'ordre décroissant.</li>
+    </ul>
+  </div>
+</div>
+<script>
+
+
+  // Exercice 1
+  const compteARebours = [10, 3, 2, 4, 5, 1, 7, 9, 8];
+
+  // Exercice 2
+  const numbers = [1, 2, 2.5, 3, 4, 5, 6.5, 7, 8.100, 9, 10.0, 10, 10];
+
+  // Exercice 3
+  const bazar = [true, 2, 500, "Haha", 10, 20, "La Reine d'Angleterre", [], ["haha"], false, 48.2]
+</script>
+<script src="../scriptPasToucher.js"></script>
+</body>
+</html>
