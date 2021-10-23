@@ -10,14 +10,14 @@
         <div id="app">
             <div>
                 <p>
-                    Déclencher la fonction "Bonjour" quand le texte de cet input change 
+                    Déclencher la fonction "Bonjour" quand le texte de cet input change
                 </p>
                 <a href="https://forum.vuejs.org/t/how-to-trigger-an-onchange-event/11081">Documentation</a>
                 <input type="text" @change="bonjour"/>
             </div>
             <div>
                 <p>
-                    Délencher la fonction "Bonjour" quand on clique sur ce span 
+                    Délencher la fonction "Bonjour" quand on clique sur ce span
                 </p>
                 <span style="border: solid;" v-on:click="bonjour">Cliquez-moi pour dire bonjour</span>
             </div>
@@ -27,9 +27,9 @@
             new Vue({
                 el: '#app',
                 methods: {
-                    
+
                     /*
-                    * Cette méthode affiche "Bonjour" grâce à console.log 
+                    * Cette méthode affiche "Bonjour" grâce à console.log
                     */
                     bonjour() {
                         console.log("Bonjour");
@@ -37,5 +37,6 @@
                 }
             });
         </script>
-    </body>
+    <script src="../scriptPasToucher.js"></script>
+</body>
 </html>

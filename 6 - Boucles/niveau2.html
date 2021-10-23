@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Boucles</title>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<h1>Niveau 2 - Pour approfondir les boucles <code>for</code></h1>
+<div class="Exercice">
+  <h2>Exercice 1 - Remplir un tableau</h2>
+  <p>Nous avons besoin de remplir le panier, et vite ! Programmez une fonction pour demander des fruits à l'utilisateur
+    !</p>
+  <div class="Consigne">
+    <p>Créer une boucle <code>for</code> qui va interroger l'utilisateur de manière à ce que : </p>
+    <ul>
+      <li>L'utilisateur saisisse <code>trois</code> fruits à la suite avec des commandes <code>prompt</code></li>
+      <li>à chaque fois que l'utilisateur a saisi un fruit, sa réponse est ajoutée dans le tableau <code>fruits</code>
+      </li>
+      <li>Une fois que les <code>3</code> fruits sont saisis, on sort de la boucle, et on affiche les fruits</li>
+    </ul>
+  </div>
+  <div class="Note">
+    <h4>Astuce</h4>
+    <p>On peut utiliser <code>document.write("Haha")</code> pour injecter la chaîne "Haha" dans la page HTML.</p>
+    <p><a href="https://developer.mozilla.org/fr/docs/Web/API/Document/write">Plus d'informations sur document.write</a>
+    </p>
+  </div>
+</div>
+<div class="Exercice">
+  <h2>Exercice 2 - Remplir un tableau, mais l'utilisateur décide de combien d'élément il veut mettre</h2>
+  <p>L'utilisateur peut désormais choisir combien d'élément il veut mettre dans le tableau.</p>
+  <p>Si l'utilisateur ne propose pas de chiffre, afficher un message à l'écran, et cesser le script.</p>
+  <div class="Consigne">
+    <ul>
+      <li>Interrogez l'utilisateur avec <code>prompt</code> pour lui demander de saisir un entier positif.</li>
+      <li>Si le chiffre saisi n'est pas un entier positif, ne pas exécuter le reste du script.</li>
+      <li>
+        Sinon, exécuter une boucle qui va de <code>0</code> au nombre choisi, qui permet à l'utilisateur de saisir
+        autant de fruits qu'il le souhaite.
+      </li>
+    </ul>
+  </div>
+  <div class="Note">
+    <h4>Ressources</h4>
+    <p>
+      <a
+        href="https://www.google.com/search?q=js+check+if+number+is+int&rlz=1C1CHBF_frFR884FR884&oq=js+check+if+number+is+int&aqs=chrome..69i57j0i512l4j0i22i30l5.4384j0j7&sourceid=chrome&ie=UTF-8">
+        Comment vérifier qu'un nombre est un entier est positif ?
+      </a>
+    </p>
+  </div>
+  <div class="Note">
+    <h4>Astuce</h4>
+    <p>Pour créer votre boucle, utilisez la réponse de l'utilisateur, elle constituera la limite d'exécution.</p>
+  </div>
+</div>
+
+<script>
+
+  // Exercice 1
+  // TODO - Demander à l'utilisateur de saisir un fruit trois fois de suite, et les stocker dansle tableau fruits
+  let fruits = [];
+
+  document.write("Vous avez choisi ");
+  document.write(fruits);
+
+</script>
+<script src="../scriptPasToucher.js"></script>
+</body>
+</html>

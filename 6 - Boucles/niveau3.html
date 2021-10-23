@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Boucles</title>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<h1>Niveau 3 - Plus de boucles</h1>
+<div class="Exercice">
+  <h2>Exercice 1 - <code>while</code></h2>
+  <p>#tantque</p>
+  <div class="Consigne">
+    <p>Créer une boucle <code>while</code> de manière à ce que : </p>
+    <ul>
+      <li>L'application demande un <code>texte</code> à l'utilisateur via <code>prompt</code></li>
+      <li>
+        <code>Tant que</code> l'utilisateur saisit une valeur différente de <code>"suuuper"</code>,
+        demander à nouveau le texte à l'utilisateur
+      </li>
+      <li>
+        Si l'utilisateur saisit le texte <code>"suuuper"</code>, alors sortir de la boucle, et afficher
+        dans la <code>console</code> le texte suivant : <code>"Vous avez craqué le mot de passe, woaw !"</code>
+      </li>
+    </ul>
+  </div>
+  <div class="Note">
+    <h4>Ressource</h4>
+    <p><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/while">Boucles while en JS</a></p>
+  </div>
+  <div class="Note" style="margin-top: 1em">
+    <h4>Astuce</h4>
+    <p>Bloqué.e ? Vérifiez que votre boucle ne s'exécute pas à l'infini.</p>
+    <p>
+      Si votre boucle s'exécute à l'infini, alors trouvez un moyen de satisfaire la <code>condition de sortie</code>
+      de la boucle.
+    </p>
+    <p>Exemple : <code>while(1 === 1) { console.log("Je suis bloqué") }</code></p>
+    <p>"Tant que <code>1</code> est égal à <code>1</code>, afficher <code>"Je suis bloqué"</code>.</p>
+    <p>Cette boucle est donc infinie, car <code>1</code> sera toujours égal à <code>1</code></p>
+  </div>
+  <div class="Note" style="margin-top: 1em">
+    <h4>Astuce</h4>
+    <p>Pour réussir cet exercice, vous pouvez vous mettre à la place d'un ordinateur.</p>
+    <p>"Tant que ça n'est pas égal à ça, alors je fais ça."</p>
+    <p>"Si ça est égal à ça, alors j'arrête de faire ça."</p>
+  </div>
+  <div class="Note" style="margin-top: 1em">
+    <h4>Astuce</h4>
+    <p>Vous pouvez réfléchir au comportement que vous voulez répéter, ici, c'est redemander à l'utilisateur de saisir
+      "Chat"</p>
+    <p>On peut également réfléchir à la condition de sortie. "Qu'est-ce qu'il me faut pour qu'il arrête de demander ?
+      Que j'écrive Chat"</p>
+    <p>Autrement dit, "Que ma <code>réponse</code> soit égale à <code>"Chat"</code>".</p>
+  </div>
+</div>
+
+<div class="Exercice">
+  <h2>Exercice 2</h2>
+  <p><code>for</code>, mais pour un <code>tableau.</code></p>
+  <div class="Consigne">
+    <p>Il y a un tableau <code>temperatures</code> dans le script.</p>
+    <p>
+      Créer une boucle <code>for</code> qui va aller de <code>0</code> à la <code>longueur</code>
+      du tableau en progressant de <code>1</code>, qui va répéter l'instruction suivante :
+    </p>
+    <ul>
+      <li>Afficher <code>"L'élément N°X est Y"</code></li>
+      <li><code>X</code> est la position de l'élément actuel dans le tableau</li>
+      <li><code>Y</code> est la valeur de l'élément actuel dans le tableau</li>
+    </ul>
+  </div>
+  <div class="Note">
+    <h4>Résultat</h4>
+    <p>Le résultat attendu est : </p>
+    <p>
+      <code>"L'élément N°0 est 40"</code>
+      <code>"L'élément N°1 est 60"</code>
+      <code>"L'élément N°2 est 80"</code>
+    </p>
+    <p>
+      Attention ! Si on ajoute un élément dans le tableau, le code doit toujours afficher tous les éléments
+      du tableau, sans avoir à modifier la limite du <code>for</code>.
+    </p>
+  </div>
+  <div class="Note">
+    <h4>Astuce</h4>
+    <p>Si <code>for</code> permet de compter de <code>0</code> à <code>10</code>,
+      il est possible de compter de <code>0</code> à <code>12</code>, <code>15</code>, ou <code>18.</code>
+    </p>
+    <p><code>for (let compteur = 0; compteur < 18; compteur ++)</code></p>
+    <p>D'autre part, considérons un suuuper tableau <code>notes</code> égal à <code>[2, 4, 8]</code></p>
+    <p>Pour accéder au premier élément, on peut écrire <code>notes[0]</code></p>
+    <p>Pour accéder au deuxième élément, on peut écrire <code>notes[1]</code></p>
+    <p>
+      Donc pour accéder à tous les éléments, il suffit de remplacer <code>l'index</code> par
+      le compteur, et voilà !
+    </p>
+  </div>
+</div>
+<div class="Exercice">
+  <h2>Exercice 3</h2>
+  <p>Un deuxième exercice pour parcourir le tableau avec <code>for</code></p>
+  <div class="Consigne">
+    <ul>
+      <li>
+        Créer une boucle <code>for</code> qui va afficher tous les membres du tableau <code>notes</code>
+        multipliés par <code>2</code>
+      </li>
+    </ul>
+  </div>
+  <div class="Note">
+    <h4>Résultat attendu : </h4>
+    <p><code>0</code></p>
+    <p><code>2</code></p>
+    <p><code>4</code></p>
+    <p><code>6</code></p>
+    <p><code>8</code></p>
+    <p><code>10</code></p>
+  </div>
+</div>
+
+<script>
+  // Exercice 1
+  // TODO - Mettre en place la boucle while ici.
+
+  // Exercice 2
+  const temperatures = [20, 40, 60];
+  temperatures.push(15, 10);
+
+  // Exercice 3
+  const numbers = [0,1,2,3,4,5];
+</script>
+<script src="../scriptPasToucher.js"></script>
+</body>
+</html>

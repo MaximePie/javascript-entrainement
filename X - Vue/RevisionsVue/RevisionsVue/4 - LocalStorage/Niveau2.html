@@ -46,7 +46,7 @@
                 },
                 methods: {
                     /*
-                    * Cette méthode sauvegarde une clé "pseudo" qui contient la valeur "Gourou des plages" dans le LocalStorage 
+                    * Cette méthode sauvegarde une clé "pseudo" qui contient la valeur "Gourou des plages" dans le LocalStorage
                     */
                     savePseudo(pseudo) {
                         localStorage.setItem('pseudo', pseudo);
@@ -83,7 +83,7 @@
                       },
 
                     /*
-                    * Cette méthode sauvegarde la valeur du data age dans une valeur "age" du LocalStorage 
+                    * Cette méthode sauvegarde la valeur du data age dans une valeur "age" du LocalStorage
                     */
                     saveAge() {
                         localStorage.setItem('age', this.age);
@@ -91,7 +91,7 @@
                     },
 
                     /*
-                    * Cette méthode récupère la valeur de "age" dans le Local Storage 
+                    * Cette méthode récupère la valeur de "age" dans le Local Storage
                     */
                     displayAge() {
                         const savedAge = localStorage.getItem('age');
@@ -104,9 +104,9 @@
                         //   console.log(savedAge);
                         // }
                     },
-                    
+
                     /*
-                    * Affiche le pseudo et l'âge récupérés dans le local Storage dans un console.log 
+                    * Affiche le pseudo et l'âge récupérés dans le local Storage dans un console.log
                     */
                     affichePersonnage() {
                       const savedAge = localStorage.getItem('age');
@@ -136,5 +136,6 @@
                 }
             });
         </script>
-    </body>
+    <script src="../scriptPasToucher.js"></script>
+</body>
 </html>

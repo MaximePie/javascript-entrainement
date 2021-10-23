@@ -3,6 +3,10 @@
 Ce projet contient divers exercices d'entraînement avec une progression par pente douce pour permettre à 
 tous de pratiquer le Javascript et démystifier son utilisation. 
 
+## Consultez les corrections ici
+
+Toutes les corrections apparaîtront sur ce lien : https://www.youtube.com/playlist?list=PLQZU7KIwwagsr0p-n4uPU1NRR9Cowoah1
+
 ## Comment s'entraîner ? 
 
 1. Téléchargez le projet en entrant cette commande :

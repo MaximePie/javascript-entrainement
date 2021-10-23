@@ -13,7 +13,7 @@
                 <button v-on:click="afficheBonjour">Afficher bonjour</button>
             </div>
             <div>
-                <p>Remplir la fonction "afficheNom" et tester avec les boutons </p>                
+                <p>Remplir la fonction "afficheNom" et tester avec les boutons </p>
                 <button v-on:click="afficheNom('Lino')">Lino</button>
                 <button v-on:click="afficheNom('Marcel')">Marcel</button>
             </div>
@@ -32,24 +32,24 @@
                     }
                 },
                 methods: {
-                    
+
                     /*
                     * Cette méthode affiche "Bonjour" via console.log
                     */
                     afficheBonjour() {
                         console.log("Bonjour");
                     },
-                    
-                    
+
+
                     /*
-                    * Cette fonction affiche le nom reçu en paramètre dans console.log 
+                    * Cette fonction affiche le nom reçu en paramètre dans console.log
                     */
                     afficheNom(nomPersonne) {
                         console.log(nomPersonne)
                     },
-                    
+
                     /*
-                    * Cette fonction affiche la valeur de motDePasseTopSecret contenu dans la structure data 
+                    * Cette fonction affiche la valeur de motDePasseTopSecret contenu dans la structure data
                     */
                     afficheData(data) {
                         console.log(this.motDePasseTopSecret);
@@ -57,5 +57,6 @@
                 }
             });
         </script>
-    </body>
+    <script src="../scriptPasToucher.js"></script>
+</body>
 </html>

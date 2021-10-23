@@ -1,4 +1,4 @@
-.Consignes {
+.Consignes, .Consigne{
     background-color: #e9e9e5;
     padding: 4px;
     margin: 16px 0;
@@ -12,6 +12,7 @@
 }
 
 .Note {
+    margin-top: 1rem;
     border-left: 2px solid #2c3dd6;
     padding: 4px;
     background-color: #dcdcd8;

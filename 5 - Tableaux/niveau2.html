@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tableaux</title>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<h1>Niveau 2 - Lire et modifier les éléments d'un tableau</h1>
+<i>Parce qu'avant de modifier quelque chose, il faut savoir ce que l'on veut modifier</i>
+<div class="Exercice">
+  <h3>Exercice 1 - Afficher un seul élément du tableau</h3>
+  <div class="Consignes">
+    <p>Avec la <code>console</code>,</p>
+    <ul>
+      <li>Afficher le <code>deuxième</code> élément du tableau <code>longestHikingPathsInFrance</code></li>
+      <li>Afficher le <code>troisième</code> élément du tableau <code>longestHikingPathsInFrance</code></li>
+    </ul>
+    <div class="Note">
+      <h4>Ressources</h4>
+      <p><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array">Afficher un élément d'un tableau</a></p>
+    </div>
+    <div class="Note">
+      <h4>Astuce</h4>
+      <p>La <code>première</code> position du tableau est <code>0</code></p>
+      <p>La <code>deuxième</code> position du tableau est <code>1</code></p>
+      <p>La <code>troisième</code> position du tableau est <code>2</code></p>
+      <p>... etc.</p>
+      <p>Autrement dit, en programmation, les tableaux commencent à <code>0</code></p>
+    </div>
+    <div class="Note">
+      <h4>Astuce</h4>
+      <p>Vous pouvez vérifier la position d'un élément grâce à la <code>console.log</code></p>
+    </div>
+  </div>
+</div>
+<div class="Exercice">
+  <h3>Exercice 2 - Modifier l'élément d'un tableau</h3>
+  <p>Modifier le tableau "cats" de manière à ce que : </p>
+  <ul>
+    <li>Son <code>deuxième</code> élément prenne la valeur "Bobby"</li>
+    <li>Son <code>cinquième</code> élément prenne la valeur "Juliette"</li>
+    <li>Son <code>huitième</code> élément prenne la valeur "Dandino"</li>
+  </ul>
+  <div class="Note">
+    <h4>Astuces</h4>
+    <p>La position d'un élément dans un tableau s'appelle un <code>index</code></p>
+    <p>Même si un <code>index</code> n'existe pas dans le tableau, il sera automatiquement créé</p>
+  </div>
+</div>
+<script>
+  //Exercice 1
+  const longestHikingPathsInFrance = ["GR34", "GR36", "GR654", "GR4", "GR5", "GR655", "GR7", "GR6"];
+  console.log(longestHikingPathsInFrance[0]) // GR34
+
+  // Exercice 2
+  const cats = ["Oscar", "Max", "Tiger", "Molly", "Misty", "Coco", "Simba"]
+  cats[0] = "Sacha"; //On modifie le premier élément du tableau
+  console.log(cats);
+</script>
+<script src="../scriptPasToucher.js"></script>
+</body>
+</html>

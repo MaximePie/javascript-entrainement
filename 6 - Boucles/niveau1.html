@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Boucles</title>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<h1>Niveau 1 - Premières boucles</h1>
+<div class="Exercice">
+  <h2>Découverte de la boucle <code>for</code></h2>
+  <p>On aimerait créer un programme qui compte jusqu'à 8. Facile non ?</p>
+  <p><code>console.log(1)</code></p>
+  <p><code>console.log(2)</code></p>
+  <p><code>console.log(3)</code></p>
+  <p><code>console.log(4)</code></p>
+  <p><code>console.log(5)</code></p>
+  <p><code>console.log(6)</code></p>
+  <p><code>console.log(7)</code></p>
+  <p><code>console.log(8)</code></p>
+  <p>... Pas terrible. Trouvons un autre moyen.</p>
+  <div class="Consignes">
+    <p>Modifier la boucle <code>for</code> d'exemple de manière à ce que </p>
+    <ul>
+      <li>Le programme compte de <code>0</code> à <code>15</code> au lieu de <code>4</code> à <code>8</code></li>
+    </ul>
+  </div>
+  <div class="Note">
+    <h4>Astuces</h4>
+    <p>Décomposons la syntaxe de <code>for</code> pour mieux la comprendre</p>
+    <p><code>for (let compteur = 0; compteur < 40; compteur = compteur + 1) { /* code */ }</code></p>
+    <p><code>let compteur = 0</code> représente la variable qui va compter le nombre de fois que l'on exécute le code</p>
+    <p><code>compteur < 40</code> représente la condition de sortie de la boucle. à lire "Tant que le compteur est inférieur à 40, exécuter le code."</p>
+    <p><code>compteur = compteur + 1</code> représente le pas, c'est-à-dire la progression du compteur.</p>
+    <p>Si le pas est égal à <code>2</code>, alors le compteur va augmenter de 2 en 2.</p>
+    <p>On peut lire l'instruction comme ceci : <i>"Pour un compteur qui va de X à Y de 1 en 1, exécuter ce code"</i></p>
+    <p>Ou bien, <i>"Exécuter ce code en partant de X jusqu'à Y, 1 par 1"</i></p>
+  </div>
+</div>
+<div class="Exercice">
+  <h2>Exercice 2 : Créer une boucle <code>for</code></h2>
+  <p>Créons une boucle qui va compter jusqu'à 10. C'est à vous !</p>
+  <div class="Consigne">
+    <ul>
+      <li>Créer une boucle qui va compter de <code>1</code> en <code>1</code> jusqu'à <code>10</code> et qui va afficher le nombre actuel dans la console</li>
+      <li>Créer une boucle qui va compter de <code>-5</code> à <code>3</code> en allant de <code>1</code> en <code>1</code>, et afficher le nombre actuel dans la console.</li>
+      <li>Créer une boucle qui va compter de <code>-10</code> à <code>6</code> en allant de <code>2</code> en <code>2</code>, et dire "bonjour" dans la console</li>
+    </ul>
+  </div>
+  <div class="Note">
+    <h4>Astuces</h4>
+    <p><code>compteur = compteur + 2</code> peut être raccourci en <code>compteur += 2</code> !</p>
+    <p><code>compteur += 1</code> peut être raccourci en <code>compteur ++</code>. Formidable !</p>
+  </div>
+</div>
+<script>
+  // Exercice 1
+  // Boucle d'exemple (Changez-moi !):
+  for (let compteur = 4; compteur < 8; compteur = compteur + 1) {
+    console.log(compteur)
+  }
+
+</script>
+<script src="../scriptPasToucher.js"></script>
+</body>
+</html>

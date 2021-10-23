@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tableaux</title>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<h1>Niveau 3 - Manipuler les éléments d'un tableau</h1>
+<div class="Exercice">
+  <h2>Exercice 1 - Ajouter un élément à un tableau</h2>
+  <p>
+    Les tableaux peuvent être étendus à l'infini, et ajouter des éléments peut être
+    fastidieux si on se contente de la formule <code>tableau[index] = X</code>
+  </p>
+  <p>
+    Heureusement, Javscript nous met à disposition tout plein de fonctions qui permettent de manipuler facilement les
+    tableaux.
+  </p>
+  <div class="Consignes">
+    <p>Avec <code>push</code>, modifier le tableau <code>peruAnimals</code> de manière à lui ajouter les animaux suivants : </p>
+    <ul>
+      <li>
+        Alpaga
+      </li>
+      <li>
+        Vigogne
+      </li>
+      <li>Chat</li>
+    </ul>
+    <p>Modifier le tableau <code>kenyaAnimals</code> de manière à ajouter les animaux suivants : </p>
+    <ul>
+      <li>
+        Dik dik
+      </li>
+      <li>
+        Daman
+      </li>
+      <li>
+        Chat
+      </li>
+      <li>
+        Oryx
+      </li>
+    </ul>
+  </div>
+  <div class="Note">
+    <h4>Ressources</h4>
+    <p><a href="https://www.w3schools.com/jsref/jsref_push.asp">Comment ajouter un élément à la fin d'un tableau en JS</a></p>
+    <p><a href="https://www.voyage-perou.com/info/geographie/lamas-camelides">Animaux du Pérou</a></p>
+    <p><a href="https://lagirafeetlegrizzly.fr/destinations/kenya/">Animaux du Kénya</a></p>
+  </div>
+</div>
+<div class="Exercice">
+  <h2>Exercice 2 - Retirer les éléments d'un tableau</h2>
+  <p>Wups ! On s'est trompé.e.s ! Il n'y a pas de chats au Pérou, ni au Kénya !</p>
+  <p>Il va falloir trouver un moyen de les retirer...</p>
+  <div class="Consigne">
+    <ul>
+      <li>Retirer le chat de la liste des animaux du Pérou</li>
+      <li>Retirer le chat de la liste des animaux du Kénya</li>
+    </ul>
+  </div>
+  <div class="Note">
+    <h4>Ressources</h4>
+    <p><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/pop">Comment retirer un élément en fin de tableau ?</a></p>
+    <p><a href="https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array">Comment retirer un élément en milieu de tableau ?</a></p>
+  </div>
+  <div class="Note">
+    <h4>Astuce</h4>
+    <p>Pour retirer un élément au milieu d'un tableau, procédez en deux étapes :</p>
+    <p>Tout d'abord, localisez l'index de l'élément à retirer</p>
+    <p>Ensuite, redimensionnez le tableau à l'aide de <code>splice</code></p>
+  </div>
+</div>
+<div class="Exercice">
+  <h2>Exercice 3 - Intervertir deux éléments</h2>
+  <p>Oh la la, les <code>Oryx</code> sont énervés !</p>
+  <p>Ils voudraient prendre la place des <code>Dik Dik</code> !</p>
+  <p>Trouvez un moyen de le faire !</p>
+  <div class="Note">
+    <h4>Astuce</h4>
+    <p><code>Oryx</code> et <code>Dik Dik</code> sont dans deux boîtes différentes. Quelles sont ces boîtes ?</p>
+  </div>
+  <div class="Note">
+    <h4>Astuce</h4>
+    <p>Si vous deviez échanger le contenu de deux boîtes en étant dans l'espace, comment feriez-vous ?</p>
+    <p>On prend le contenu d'une boîte, on le met quelque part</p>
+    <p>On prend le contenu de la deuxième boîte, on le met dans la première boîte</p>
+    <p>On prend le contenu de la première boîte, on le met dans la deuxième boîte</p>
+    <p>Trouvez un moyen de mettre ça en place pour échanger les positions des <code>Oryx</code> et des <code>Dik Dik</code></p>
+  </div>
+</div>
+<script>
+
+  // Exercice 1
+  const peruAnimals = ["Lama"];
+  // TODO - Ajouter les animaux ici
+  console.log(peruAnimals); // ["Lama", "Alpaga", "Vigogne", "Chat"]
+
+  const kenyaAnimals = [];
+  // TODO - Ajouter les animaux ici
+  console.log(kenyaAnimals); // ["Dik dik", "Daman", "Chat", "Oryx"];
+
+  // Exercice 2
+  // TODO - Supprimer "Chat" de peruAnimals
+  console.log(peruAnimals); // ["Lama", "Alpaga", "Vigogne"]
+
+  // TODO - Supprimer "Chat" de kenyaAnimals
+  console.log(kenyaAnimals); // ["Dik dik", "Daman", "Oryx"];
+
+
+  // Exercice 3
+
+  // TODO - Remplacez Oryx par Dik Dik, et Dik Dik par Oryx dans kenyaAnimals
+
+</script>
+<script src="../scriptPasToucher.js"></script>
+</body>
+</html>

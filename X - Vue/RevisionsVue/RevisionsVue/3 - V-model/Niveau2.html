@@ -10,7 +10,7 @@
         <div id="app">
             <div>
                 <p>
-                    Afficher chaque fruit dans une boucle v-for. Pour chaque fruit, afficher son nom, et un input qui permet de changer son prix grâce à v-model. 
+                    Afficher chaque fruit dans une boucle v-for. Pour chaque fruit, afficher son nom, et un input qui permet de changer son prix grâce à v-model.
                 </p>
                 <div v-for="fruit in fruits">
                     <p>{{ fruit.name }}</p>
@@ -28,24 +28,25 @@
                         fruits: [
                             {
                                  name: "Apple",
-                                prix: 50,   
+                                prix: 50,
                             },
                             {
                                  name: "Orange",
-                                prix: 8,   
+                                prix: 8,
                             },
                             {
                                  name: "DesBarres",
-                                prix: undefined,   
+                                prix: undefined,
                             },
                             {
                                  name: "Apple",
-                                prix: 50,   
+                                prix: 50,
                             },
                         ]
                     }
                 }
             });
         </script>
-    </body>
+    <script src="../scriptPasToucher.js"></script>
+</body>
 </html>
